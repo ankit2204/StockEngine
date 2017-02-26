@@ -1,0 +1,8 @@
+pipeline:
+  build:
+    image: openjdk:8-jdk
+    commands:
+      - ./gradlew build --stacktrace --info
+    when:
+      branch: master
+      event: [ push, pull_request ]
